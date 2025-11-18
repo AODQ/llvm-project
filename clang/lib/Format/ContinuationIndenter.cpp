@@ -1033,6 +1033,8 @@ void ContinuationIndenter::addTokenOnCurrentLine(LineState &State, bool DryRun,
     // assignment without binary expression on the RHS.
     if (Style.BreakBeforeBinaryOperators == FormatStyle::BOS_None)
       CurrentState.LastSpace = State.Column;
+    else if (Style.BreakBeforeBinaryOperators == FormatStyle::BOS_BlockStyle)
+      CurrentState.LastSpace = CurrentState.Indent; // Minimal indentation for block style
   } else if (Previous.is(TT_InheritanceColon)) {
     CurrentState.Indent = State.Column;
     CurrentState.LastSpace = State.Column;

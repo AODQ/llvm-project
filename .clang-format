@@ -1,2 +1,6 @@
 BasedOnStyle: LLVM
 LineEnding: LF
+BreakBeforeBinaryOperators: BlockStyle
+AlignOperands: DontAlign
+AlignAfterOpenBracket: AlwaysBreak
+ContinuationIndentWidth: 2
