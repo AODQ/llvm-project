@@ -1,5 +1,6 @@
 BasedOnStyle: LLVM
 LineEnding: LF
-BreakBeforeBinaryOperators: NonAssignment
-AlignOperands: AlignAfterOperator
-AlignAfterOpenBracket: BlockIndent
+BreakBeforeBinaryOperators: BlockStyle
+AlignOperands: DontAlign
+AlignAfterOpenBracket: AlwaysBreak
+ContinuationIndentWidth: 2

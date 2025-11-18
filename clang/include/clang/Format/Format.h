@@ -1820,6 +1820,18 @@ struct FormatStyle {
     ///                        > ccccccccccccccccccccccccccccccccccccccccc;
     /// \endcode
     BOS_All,
+    /// Break before operators with block-style formatting in parentheses.
+    /// \code
+    ///    LooooooooooongType loooooooooooooooooooooongVariable =
+    ///        someLooooooooooooooooongFunction();
+    ///
+    ///    bool value = (
+    ///        aaaaaaaaaaaaa
+    ///    + bbbbbbbbbbbbb
+    ///    + ccccccccccccc
+    ///    );
+    /// \endcode
+    BOS_BlockStyle,
   };
 
   /// The way to wrap binary operators.

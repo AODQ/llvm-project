@@ -6391,6 +6391,7 @@ bool TokenAnnotator::canBreakBefore(const AnnotatedLine &Line,
   if (Right.is(TT_BinaryOperator) &&
       Style.BreakBeforeBinaryOperators != FormatStyle::BOS_None &&
       (Style.BreakBeforeBinaryOperators == FormatStyle::BOS_All ||
+       Style.BreakBeforeBinaryOperators == FormatStyle::BOS_BlockStyle ||
        Right.getPrecedence() != prec::Assignment)) {
     return true;
   }
@@ -6470,6 +6471,7 @@ bool TokenAnnotator::canBreakBefore(const AnnotatedLine &Line,
   if ((Left.isBinaryOperator() || Left.is(TT_BinaryOperator)) &&
       Left.isNoneOf(tok::arrowstar, tok::lessless) &&
       Style.BreakBeforeBinaryOperators != FormatStyle::BOS_All &&
+      Style.BreakBeforeBinaryOperators != FormatStyle::BOS_BlockStyle &&
       (Style.BreakBeforeBinaryOperators == FormatStyle::BOS_None ||
        Left.getPrecedence() == prec::Assignment)) {
     return true;

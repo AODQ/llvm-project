@@ -139,6 +139,7 @@ template <> struct ScalarEnumerationTraits<FormatStyle::BinaryOperatorStyle> {
     IO.enumCase(Value, "None", FormatStyle::BOS_None);
     IO.enumCase(Value, "false", FormatStyle::BOS_None);
     IO.enumCase(Value, "NonAssignment", FormatStyle::BOS_NonAssignment);
+    IO.enumCase(Value, "BlockStyle", FormatStyle::BOS_BlockStyle);
   }
 };
 
